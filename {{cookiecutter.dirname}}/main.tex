@@ -1,30 +1,65 @@
-\documentclass{article}
-
-% some default packages
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb}
+\documentclass[a4paper]{paper} 
+\usepackage[english]{babel}  
+\usepackage[margin=2.5cm]{geometry}
 \usepackage{graphicx}
-\usepackage{float}
+\usepackage{lipsum}
 \usepackage{xcolor}
+\usepackage{booktabs}
+\sectionfont{\large\sf\bfseries\color{black!70!blue}} 
 
-\title{ {{cookiecutter.title}} }
-\author{ {{cookiecutter.author}} }
+
+\title{Research Manuscript}
+\subtitle{A more descriptive title}
+
+\author{Andrej Berg} 
+\institution{Department of Chemistry, Universit\"at Konstanz, Universit\"atsstrasse 10, Konstanz}
+
+
+% some options
+\onecolumn  % 
+
 
 \begin{document}
+	
+	% cover page
+	%\onecolumn[
+	\maketitle 
+	\hrule 
+	\smalltableofcontents
+	\begin{abstract} {\lipsum[12]} \end{abstract}
+	\begin{keywords}
+		MWE, \LaTeX, document class, \texttt{paper},
+		\texttt{article}, dummy text    
+	\end{keywords}
+	\hrule\bigskip
+	%]
+	% cover page 
+	
 
-\maketitle
-\begin{abstract}
-   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-\end{abstract}
+\section{Introductio} 
+Some introduction. \lipsum[2]
+\section{Materia et modos} 
+More dummy text. \lipsum[4] 
 
-\newpage
-\section{Introduction}
 
-\section{Methods}
+\begin{table}[b]
+	\centering
+	\begin{tabular}{lcccccc}
+		\toprule
+		& I &  II & III & IV & V & VI \\
+		\midrule
+		Vandali     & 123 & 456 & 678 & 321 & 644 & 768  \\ 
+		Visigothorum & 021 & 229 & 678 & 123 & 456 & 678 \\     
+		\bottomrule
+	\end{tabular}
+	\caption{Visigothi cum Romanis foederati Hispaniam ingressi sunt et contra Vandalos. Mortem comitis utraque pugna.} 
+\end{table}
 
-\section{Results}
-
-\section{Conclusion}
-
+\section{Consequitur} 
+These are the results. \lipsum[1]
+\section{Disputatio} 
+\lipsum[4] 
+\section{Conclusionibus}
+\lipsum[5]
 
 \end{document}
